@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game details page for our online casino.">
+    <meta name="keywords" content="Online Casino, Game Details, Betting, Odds">
+    <meta name="author" content="Your Name or Company">
+    <title>Game Details</title>
+</head>
+<body>
+    <a href="/home">Home</a> | <a href="javascript:history.back()">Go Back</a>
+
+    {% if game is not none %}
+        <h1>Game ID: {{ id }}</h1>
+        <p>Name: {{ game.name }}</p>
+        <p>Odds: {{ game.odds }}</p>
+    {% else %}
+        <p>No game found with this ID.</p>
+    {% endif %}
+</body>
+</html>
